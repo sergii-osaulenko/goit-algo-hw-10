@@ -6,7 +6,7 @@ model = pulp.LpProblem("Maximize_Production", pulp.LpMaximize)
 
 # 2. Визначення змінних
 # lowBound=0 гарантує, що ми не можемо виробити від'ємну кількість
-# cat='Integer' вказує, що кількість пляшок має бути цілою (не можна виробити 1.5 пляшки)
+# cat='Integer' вказує, що кількість пляшок має бути цілою (не можна виробити 1,5 пляшки)
 lemonade = pulp.LpVariable('Lemonade', lowBound=0, cat='Integer')
 fruit_juice = pulp.LpVariable('Fruit_Juice', lowBound=0, cat='Integer')
 
