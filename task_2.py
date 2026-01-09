@@ -37,13 +37,13 @@ print(f"Інтеграл (Monte Carlo): {monte_carlo_integral}")
 result_quad, error = spi.quad(f, a, b)
 print(f"Інтеграл (SciPy quad): {result_quad}")
 
-# --- Розрахунок похибки ---
+# Розрахунок похибки
 absolute_error = abs(monte_carlo_integral - result_quad)
 relative_error = (absolute_error / result_quad) * 100
 print(f"Абсолютна похибка: {absolute_error}")
 print(f"Відносна похибка: {relative_error:.4f}%")
 
-# --- Візуалізація (опціонально, для наочності методу) ---
+# Візуалізація (опціонально, для наочності методу)
 # plt.figure(figsize=(8, 6))
 plt.scatter(rand_x[points_under_curve], rand_y[points_under_curve], color='green', s=1, label='Під кривою')
 plt.scatter(rand_x[~points_under_curve], rand_y[~points_under_curve], color='red', s=1, label='Над кривою')
