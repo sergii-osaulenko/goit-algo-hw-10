@@ -14,13 +14,13 @@ fruit_juice = pulp.LpVariable('Fruit_Juice', lowBound=0, cat='Integer')
 model += lemonade + fruit_juice, "Total_Production_Amount"
 
 # 4. Додавання обмежень (Constraints)
-# Обмеження на Воду
+# Обмеження на Воду (Water)
 model += 2 * lemonade + 1 * fruit_juice <= 100, "Water_Constraint"
-# Обмеження на Цукор
+# Обмеження на Цукор (Sugar)
 model += 1 * lemonade <= 50, "Sugar_Constraint"
-# Обмеження на Лимонний сік
+# Обмеження на Лимонний сік (Lemon_Juice)
 model += 1 * lemonade <= 30, "Lemon_Juice_Constraint"
-# Обмеження на Фруктове пюре
+# Обмеження на Фруктове пюре (Fruit_Puree)
 model += 2 * fruit_juice <= 40, "Fruit_Puree_Constraint"
 
 # 5. Розв'язання моделі
