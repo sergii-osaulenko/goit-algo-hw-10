@@ -27,13 +27,13 @@ count_under = np.sum(points_under_curve)
 # Площа прямокутника, в якому ми розкидали точки
 area_rectangle = (b - a) * max_y
 
-# Обчислення інтеграла методом Монте-Карло
+# Обчислення інтеграла методом Монте-Карло (Monte Carlo)
 monte_carlo_integral = (count_under / N) * area_rectangle
 
 print(f"Кількість точок: {N}")
 print(f"Інтеграл (Monte Carlo): {monte_carlo_integral}")
 
-# Перевірка аналітичним методом (SciPy)
+# Перевірка аналітичним методом (SciPy quad)
 result_quad, error = spi.quad(f, a, b)
 print(f"Інтеграл (SciPy quad): {result_quad}")
 
