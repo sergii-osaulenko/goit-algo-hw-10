@@ -1,2 +1,2 @@
 # goit-algo-hw-10
-Homework #
+Homework #10
