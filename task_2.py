@@ -33,7 +33,7 @@ monte_carlo_integral = (count_under / N) * area_rectangle
 print(f"Кількість точок: {N}")
 print(f"Інтеграл (Monte Carlo): {monte_carlo_integral}")
 
-# Перевірка аналітичним методом (SciPy quad)
+# Перевірка аналітичним методом (SciPy)
 result_quad, error = spi.quad(f, a, b)
 print(f"Інтеграл (SciPy quad): {result_quad}")
 
